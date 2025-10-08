@@ -6,58 +6,119 @@
   <title>Fê Abbehusen · Link em Bio</title>
   <meta name="description" content="Fê Abbehusen · Jóias Maria Dolores · Revenda e curadoria em Salvador · Prove antes de comprar">
   <meta name="theme-color" content="#0F0F10">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Fê Abbehusen · Jóias Maria Dolores">
+  <meta property="og:description" content="Revenda Maria Dolores · Curadoria de joias exclusivas · Prove antes de comprar">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://feabbehusen.github.io/feabbehusen/logotipo.jpg">
+  <meta property="og:url" content="">
+
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+
   <style>
     :root{
-      --bg:#0F0F10; --fg:#F7F5F0; --muted:#B6B0A7;
-      --gold:#C9A227; --gold-soft:#D6B166; --warm:#6E6A63;
+      --bg:#0F0F10;
+      --fg:#F7F5F0;
+      --muted:#B6B0A7;
+      --gold:#C9A227;
+      --gold-soft:#D6B166;
+      --warm:#6E6A63;
     }
-    *{ box-sizing:border-box } html,body{ height:100% }
+    *{ box-sizing:border-box }
+    html,body{ height:100% }
     body{
       margin:0;
       background:radial-gradient(1200px 800px at 70% -10%, rgba(201,162,39,.12), transparent 60%),
                  radial-gradient(1200px 800px at 0% 100%, rgba(214,177,102,.12), transparent 55%),
                  var(--bg);
-      color:var(--fg); font-family: Manrope, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial;
-      display:flex; align-items:center; justify-content:center; padding:24px;
-      -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+      color:var(--fg);
+      font-family: Manrope, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial;
+      display:flex; align-items:center; justify-content:center;
+      padding:24px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
     main{
-      width:100%; max-width:560px; background:rgba(255,255,255,0.02);
-      border:1px solid rgba(255,255,255,0.08); border-radius:24px; padding:28px 24px;
-      box-shadow: 0 10px 40px rgba(0,0,0,.45); backdrop-filter: blur(6px);
+      width:100%; max-width:560px;
+      background:rgba(255,255,255,0.02);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:24px;
+      padding:28px 24px;
+      box-shadow: 0 10px 40px rgba(0,0,0,.45);
+      backdrop-filter: blur(6px);
     }
     .brand{ display:flex; align-items:center; gap:14px; justify-content:center; }
-    .avatar{ width:92px; height:92px; border-radius:50%;
-      background:#0c0c0d url('') center/cover no-repeat; /* Substitua '' pela URL/arquivo do seu logo */
-      border:1.5px solid rgba(201,162,39,.7); flex:0 0 auto; }
+    .avatar{
+      width:92px; height:92px; border-radius:50%;
+      background:#0c0c0d url('https://raw.githubusercontent.com/feabbehusen/feabbehusen/main/logotipo.jpg') center/cover no-repeat;
+      border:1.5px solid rgba(201,162,39,.7);
+      flex:0 0 auto;
+    }
     h1{ font-size:26px; line-height:1.2; margin:0; letter-spacing:.2px; font-weight:600; }
-    .desc{ text-align:center; color:var(--muted); margin:12px auto 18px; font-size:14.5px; line-height:1.45; max-width:46ch; }
-    .divider{ width:160px; height:1.6px; margin:6px auto 18px; background:linear-gradient(90deg, transparent, var(--gold), transparent); border-radius:2px; }
+    .desc{
+      text-align:center; color:var(--muted);
+      margin:12px auto 18px; font-size:14.5px; line-height:1.45;
+      max-width:46ch;
+    }
+    .divider{
+      width:160px; height:1.6px; margin:6px auto 18px;
+      background:linear-gradient(90deg, transparent, var(--gold), transparent);
+      border-radius:2px;
+    }
     .links{ display:flex; flex-direction:column; gap:12px; }
     .btn{
-      display:flex; align-items:center; justify-content:center; gap:10px; width:100%; padding:14px 16px; border-radius:14px;
-      text-decoration:none; font-weight:600; letter-spacing:.3px; color:#101010; background:var(--fg);
-      border:1px solid rgba(255,255,255,.08); transition: transform .04s ease, box-shadow .2s ease;
+      appearance:none; -webkit-appearance:none;
+      display:flex; align-items:center; justify-content:center; gap:10px;
+      width:100%; padding:14px 16px; border-radius:14px;
+      text-decoration:none; cursor:pointer; user-select:none;
+      font-weight:600; letter-spacing:.3px;
+      color:#101010; background:var(--fg);
+      border:1px solid rgba(255,255,255,.08);
+      transition: transform .04s ease, box-shadow .2s ease;
     }
     .btn:hover{ transform: translateY(-1px); box-shadow:0 12px 24px rgba(0,0,0,.35); }
-    .btn.gold{ color:#111; background:linear-gradient(135deg, #F6E7C1, #D6B166 45%, #C9A227 100%); border:0; }
-    .btn.beige{ background:#E1D8C7; color:#101010; border:1px solid rgba(0,0,0,.05); }
-    .btn.ghost{ background:transparent; color:var(--fg); border:1px solid rgba(201,162,39,.6); }
+    .btn.gold{
+      color:#111; background:linear-gradient(135deg, #F6E7C1, #D6B166 45%, #C9A227 100%);
+      border:0;
+    }
+    .btn.ghost{
+      background:transparent; color:var(--fg);
+      border:1px solid rgba(201,162,39,.6);
+    }
     .btn small{ font-weight:500; color:var(--warm) }
-    .footer{ margin-top:16px; text-align:center; font-size:12px; color:var(--muted); }
-    .pill{ display:inline-block; margin:8px auto 6px; padding:6px 10px; border:1px solid rgba(201,162,39,.55); color:var(--gold); border-radius:999px; font-size:12px; letter-spacing:.6px; text-transform:uppercase; }
+    .footer{
+      margin-top:16px; text-align:center; font-size:12px; color:var(--muted);
+    }
+    .pill{
+      display:inline-block; margin:8px auto 6px; padding:6px 10px;
+      border:1px solid rgba(201,162,39,.55); color:var(--gold); border-radius:999px;
+      font-size:12px; letter-spacing:.6px; text-transform:uppercase;
+    }
+    .sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0; }
+    /* Simple CSS icons */
     .i{ width:18px; height:18px; display:inline-block; position:relative; }
+    .i.link::before{ content:''; position:absolute; inset:3px 4px; border:2px solid #111; border-radius:5px; }
     .i.insta::before{ content:''; position:absolute; inset:2.5px; border:2px solid #111; border-radius:5px; }
     .i.insta::after{ content:''; position:absolute; width:6px; height:6px; border:2px solid #111; border-radius:50%; left:6px; top:6px; }
     .i.pdf::before{ content:''; position:absolute; left:3px; top:2px; width:12px; height:14px; border:2px solid #111; border-radius:3px; }
     .i.whats::before{ content:''; position:absolute; inset:1px; border-radius:50%; background:#25D366; }
     .i.whats::after{ content:''; position:absolute; left:6px; top:5px; width:8px; height:6px; border-bottom:3px solid #fff; border-left:3px solid #fff; transform:skewX(-15deg) rotate(-35deg); }
+    @media (prefers-color-scheme: light){
+      body{ background:var(--fg); color:#111 }
+      main{ background:#fff; border-color:#eee }
+      .btn{ color:#111; background:#111; color:#fff; border-color:#111 }
+      .btn.ghost{ color:#111; border-color:#C9A227 }
+      .desc{ color:#4b4b4b }
+      .footer{ color:#767676 }
+      .i.link::before, .i.insta::before, .i.insta::after, .i.pdf::before{ border-color:#fff }
+    }
   </style>
 </head>
 <body>
   <main role="main" aria-label="Links Fê Abbehusen">
     <div class="brand" aria-label="Identidade visual">
+      <!-- Substitua o background da .avatar pela URL do seu logotipo (PNG 1080x1080) -->
       <div class="avatar" role="img" aria-label="Logotipo Fê Abbehusen"></div>
       <h1>Fê Abbehusen</h1>
     </div>
@@ -71,15 +132,12 @@
     <div class="divider" aria-hidden="true"></div>
 
     <nav class="links" aria-label="Links principais">
-      <!-- 1) INSTAGRAM (gold) -->
       <a class="btn gold" href="https://instagram.com/feabbehusen.joias" target="_blank" rel="noopener">
         <span class="i insta" aria-hidden="true"></span> Instagram <small>@feabbehusen.joias</small>
       </a>
-      <!-- 2) CATÁLOGO (bege #E1D8C7) -->
-      <a class="btn beige" href="./CATALOGO.pdf" download="Catalogo_Fe_Abbehusen.pdf">
+      <a class="btn" href="./CATALOGO.pdf" download="Catalogo_Fe_Abbehusen.pdf">
         <span class="i pdf" aria-hidden="true"></span> Baixar Catálogo (PDF)
       </a>
-      <!-- 3) WHATSAPP (ghost, número novo) -->
       <a class="btn ghost" href="https://wa.me/5571996948590?text=Oi%20F%C3%AA%2C%20quero%20agendar%20um%20try-on%20%F0%9F%92%8E" target="_blank" rel="noopener">
         <span class="i whats" aria-hidden="true"></span> WhatsApp
       </a>

@@ -124,6 +124,28 @@
     .btn.gold .i.insta::after{
       border-color:#fff !important;
     }
+    /* === Forçar tema claro em qualquer dispositivo === */
+    :root { color-scheme: light; } /* dica pro navegador/UA */
+    
+    body{
+      background: var(--fg) !important; /* creme claro */
+      color: #111 !important;
+    }
+    
+    main{
+      background: #fff !important;
+      border-color: #eee !important;
+    }
+    
+    /* textos e ghost buttons no claro */
+    .desc, .sub, .footer{ color:#767676 !important; }
+    .btn.ghost{ color:#111 !important; border-color:#C9A227 !important; }
+    
+    /* linhas dos ícones no claro */
+    .i.link::before,
+    .i.insta::before, .i.insta::after,
+    .i.pdf::before{ border-color:#111 !important; }
+
   </style>
 </head>
 <body>
@@ -143,7 +165,7 @@
     <div class="divider" aria-hidden="true"></div>
 
     <nav class="links" aria-label="Links principais">
-      <a class="btn gold" href="https://instagram.com/feabbehusen.joias" target="_blank" rel="noopener">
+      <a class="btn beige" href="https://instagram.com/feabbehusen.joias" target="_blank" rel="noopener noreferrer">
         <span class="i insta" aria-hidden="true"></span> Instagram <small>@feabbehusen.joias</small>
       </a>
       <a class="btn beige" href="./catalogos.html" rel="noopener noreferrer">
